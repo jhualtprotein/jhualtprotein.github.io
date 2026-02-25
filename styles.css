@@ -117,6 +117,27 @@ nav {
 .hero {
   background: var(--brand);
   padding: 96px 0 80px;
+  overflow: hidden;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 56px;
+  align-items: center;
+}
+.hero-img {
+  border-radius: 4px;
+  overflow: hidden;
+  height: 420px;
+}
+.hero-img img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center;
+  display: block;
+}
+@media (max-width: 900px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-img { display: none; }
 }
 .hero h1 {
   font-family: 'DM Serif Display', Georgia, serif;
@@ -124,7 +145,6 @@ nav {
   color: var(--navy);
   line-height: 1.08;
   margin-bottom: 24px;
-  max-width: 720px;
   font-weight: 400;
   letter-spacing: -0.02em;
 }
